@@ -71,7 +71,6 @@ Install this project with:
   npm install
 ```
 
-
 ### Usage
 
 To run the project, execute the following command:
