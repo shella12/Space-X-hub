@@ -12,8 +12,8 @@ const RocketsContainer = () => {
   });
 
   return (
-    <section className="container m-2">
-      <ul className="d-flex flex-column align-items">
+    <section className='container m-2'>
+      <ul className='d-flex flex-column align-items'>
         {rockets.map((rocket) => (
           <Rocket
             key={rocket.id}

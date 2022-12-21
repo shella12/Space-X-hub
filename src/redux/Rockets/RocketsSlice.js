@@ -1,4 +1,3 @@
-/* eslint no-param-reassign: "error" */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const rocketUrl = 'https://api.spacexdata.com/v3/rockets';
@@ -19,8 +18,9 @@ const rocketsSlice = createSlice({
   reducers: {
     bookRockets: (state, action) => {
       const rocketId = action.payload;
-      state.rockets = state.rockets.map((rocket) => {
+      const newState = state.rockets.map((rocket) => {
         if (rocket.id === rocketId) {
+          console.log('it was reserved');
           return {
             ...rocket,
             reserved: true,
@@ -32,7 +32,8 @@ const rocketsSlice = createSlice({
     },
     cancelBooking: (state, action) => {
       const rocketId = action.payload;
-      state.rockets = state.rockets.map((rocket) => {
+      const newState = state.rockets.map((rocket) => {
+        console.log('it was cancel');
         if (rocket.id === rocketId) {
           return {
             ...rocket,
