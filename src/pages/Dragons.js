@@ -18,7 +18,7 @@ const Dragons = () => {
           key={dragon.id}
           name={dragon.name}
           type={dragon.type}
-          flickr_images={dragon.flickr_images}
+          img={dragon.img}
         />
       ))}
     </div>

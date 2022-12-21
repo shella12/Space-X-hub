@@ -1,13 +1,11 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const getDragons = (payload) => ({ type: 'GET', payload });
+export const getDragons = (payload) => ({ type: 'GET', payload });
 
 const url = 'https://api.spacexdata.com/v3/dragons';
 
-const initialState = {
-  dragons: [],
-};
+const initialState = [];
 
 export const fetchDragons = createAsyncThunk(
   'dragon/fetchDragons',
@@ -26,7 +24,7 @@ export const fetchDragons = createAsyncThunk(
 const dragonsReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'GET':
-      return { ...state, dragons: action.payload };
+      return action.payload;
     default:
       return state;
   }
