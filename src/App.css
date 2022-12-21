@@ -7,23 +7,26 @@
   text-decoration: none;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 3%;
-}
-
-.logo {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
+header,
+.logo,
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header {
+  padding: 1.5rem 3%;
+  border-bottom: 1px solid dimgray;
+}
+
+.logo,
+nav {
   gap: 1rem;
+}
+
+a {
+  color: inherit;
 }
 
 nav a:nth-child(4) {
@@ -32,6 +35,7 @@ nav a:nth-child(4) {
 }
 
 .active {
+  color: blue;
   text-decoration: underline;
 }
 
@@ -55,4 +59,3 @@ nav a:nth-child(4) {
 
 .btn {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
