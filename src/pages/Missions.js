@@ -7,7 +7,7 @@ const Missions = () => {
   const missions = useSelector((state) => state.missionReducer);
   useEffect(() => {
     dispatch(fetchMissions()).unwrap();
-  });
+  }, []);
   return (
     <table>
       <tr>
