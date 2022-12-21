@@ -8,3 +8,5 @@ const fetchMissions = async() => {
     });
     return response;
 }
+
+export default fetchMissions;
