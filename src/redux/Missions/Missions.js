@@ -1,28 +1,37 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import fetchMissions from "../../API/api-missions";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import fetchMissionsApi from '../../API/api-missions';
 
-state = {
-    missions: [],
-    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
-    error: null,
-  };
+const initialState = [];
 const FETCH_DATA = 'REACT-GROUP-PROJECT/redux/Missions/FETCH-DATA';
-const fetchData = createAsyncThunk(FETCH_DATA,async() => {
-    const response =await fetchMissions();
-    return response;
+export const fetchMissions = createAsyncThunk(FETCH_DATA, async () => {
+  const response = await fetchMissionsApi();
+  return response;
+});
+const userSliceMissions = createSlice({
+  name: 'Missions',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchMissions.pending, (state) => ({
+      ...state,
+    }))
+      .addCase(fetchMissions.fulfilled, (state, action) => {
+        console.log(action.payload);
+        // const missions = action.payload.map((item) => ({
+        //   mission_id: item.mission_id,
+        //   mission_name: item.mission_name,
+        //   description: item.description,
+        // }));
+        return state.concat(action.payload.map((item) => ({
+          mission_id: item.mission_id,
+          mission_name: item.mission_name,
+          description: item.description,
+        })));
+      })
+      .addCase(fetchMissions.rejected, (state) => ({
+        ...state,
+      }));
+  },
 });
 
-const userSlice = createSlice({
-    name:'Missions',
-    state,
-    reducers:{},
-    extraReducers: (builder) {
-        builder.addCase(fetchMissions,(state)=> {
-            return {
-                ...state,
-                status: 'pending',
-            }
-        })
-    }
-});
-
+export default userSliceMissions.reducer;
