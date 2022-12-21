@@ -34,3 +34,30 @@ nav a:nth-child(4) {
 .active {
   text-decoration: underline;
 }
+
+/* rockets page */
+.rocket-container {
+  margin-top: 2rem;
+}
+
+.col {
+  padding: 0;
+}
+
+.rocket-img {
+  width: 300px;
+  height: 200px;
+}
+
+.info {
+  text-align: left;
+}
+
+.btn {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* .rocket {
+  display: flex;
+  flex-direction: column;
+} */

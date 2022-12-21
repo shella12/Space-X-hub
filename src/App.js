@@ -4,6 +4,7 @@ import Missions from './pages/Missions';
 import Dragons from './pages/Dragons';
 import Profile from './pages/MyProfile';
 import Navbar from './components/Navbar';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import './App.css';
 
