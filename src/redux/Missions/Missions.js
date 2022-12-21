@@ -15,19 +15,7 @@ const userSliceMissions = createSlice({
     builder.addCase(fetchMissions.pending, (state) => ({
       ...state,
     }))
-      .addCase(fetchMissions.fulfilled, (state, action) => {
-        console.log(action.payload);
-        // const missions = action.payload.map((item) => ({
-        //   mission_id: item.mission_id,
-        //   mission_name: item.mission_name,
-        //   description: item.description,
-        // }));
-        return state.concat(action.payload.map((item) => ({
-          mission_id: item.mission_id,
-          mission_name: item.mission_name,
-          description: item.description,
-        })));
-      })
+      .addCase(fetchMissions.fulfilled, (state, action) => action.payload)
       .addCase(fetchMissions.rejected, (state) => ({
         ...state,
       }));

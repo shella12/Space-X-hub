@@ -3,7 +3,7 @@ import userSliceMissions from './Missions/Missions';
 
 const store = configureStore({
   reducer: {
-    userSliceMissions,
+    missionReducer: userSliceMissions,
   },
 });
 
