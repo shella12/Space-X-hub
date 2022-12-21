@@ -16,4 +16,13 @@ export const fetchDragons = createAsyncThunk(
   },
 );
 
-export default fetchDragons;
+const dragonsReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'GET':
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
+export default dragonsReducer;
