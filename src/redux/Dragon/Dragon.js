@@ -2,11 +2,12 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const getDragons = (payload) => ({ type: 'GET', payload });
+export const reserveDragon = (id) => ({ type: 'RESERVE', id });
+export const cancelDragon = (id) => ({ type: 'CANCEL', id });
+
 const url = 'https://api.spacexdata.com/v3/dragons';
 
-const initialState = {
-  dragons: [],
-};
+const initialState = [];
 
 export const fetchDragons = createAsyncThunk(
   'dragon/fetchDragons',
@@ -16,7 +17,9 @@ export const fetchDragons = createAsyncThunk(
       id: dragon.id,
       name: dragon.name,
       type: dragon.type,
-      flickr_images: dragon.flickr_images,
+      img: dragon.flickr_images[0],
+      description: dragon.description,
+      reserved: false,
     }));
     dispatch(getDragons(dragons));
   },
@@ -26,6 +29,20 @@ const dragonsReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'GET':
       return action.payload;
+    case 'RESERVE':
+      return state.map((state) => {
+        if (state.id === action.id) {
+          return { ...state, reserved: true };
+        }
+        return state;
+      });
+    case 'CANCEL':
+      return state.map((state) => {
+        if (state.id === action.id) {
+          return { ...state, reserved: false };
+        }
+        return state;
+      });
     default:
       return state;
   }

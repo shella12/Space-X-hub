@@ -92,7 +92,6 @@ tr:nth-child(even) {
   background-color: #D66C72;
 }
 
-
 .member,.not-member {
   background-color: #4C9FB6;
   border-radius: 5px;
@@ -104,4 +103,47 @@ tr:nth-child(even) {
 .not-member {
   background-color: #6F757D;
 }
+.dragon {
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.dragon:first-child {
+  background-position: center;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.type {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.reserved {
+  width: auto;
+}
+
+/* rockets page */
+.rocket-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.rocket-img {
+  width: 300px;
+  height: 200px;
+}
+
+.info {
+  text-align: left;
+}
+
+.btn {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
