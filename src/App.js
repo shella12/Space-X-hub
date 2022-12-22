@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { getRocketData } from './redux/Rockets/Rockets';
 import RocketsContainer from './pages/Rocket/Rockets';
 import Missions from './pages/Missions';
