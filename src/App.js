@@ -26,7 +26,7 @@ function App() {
         <Route index element={<RocketsContainer />} />
         <Route path="/Missions" element={<Missions />} />
         <Route path="/Dragons" element={<Dragons />} />
-        <Route path="/Dragons" element={<Profile />} />
+        <Route path="/MyProfile" element={<Profile />} />
       </Routes>
     </div>
   );

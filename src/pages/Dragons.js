@@ -9,8 +9,10 @@ const Dragons = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchDragons());
-  }, [dispatch]);
+    if (dragons.length === 0) {
+      dispatch(fetchDragons());
+    }
+  }, [dispatch, dragons.length]);
 
   const onReserve = (e) => {
     dispatch(reserveDragon(e.target.id));
