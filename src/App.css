@@ -39,26 +39,54 @@ nav a:nth-child(4) {
   text-decoration: underline;
 }
 
-/* rockets page */
-.rocket-container {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 1rem;
+/* table */
+table {
+  margin: 3rem;
+  border-collapse: collapse;
 }
 
-.rocket-img {
-  width: 300px;
-  height: 200px;
+table,
+tr,
+td,
+th {
+  border: 1px solid gray;
+  text-align: start;
 }
 
-.info {
-  text-align: left;
+th,
+tr td:nth-child(-n+2) {
+  vertical-align: text-top;
+  padding: 1rem 2rem 1rem 0.3rem;
 }
 
-.btn {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+tr td:nth-child(n+3) {
+  width: 12%;
+  padding: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: lightgrey;
+}
+
+td button {
+  background-color: transparent;
+  padding: 0.6rem 0.7rem;
+  border: 2px solid darkgray;
+  color: gray;
+}
+
+td button:hover {
+  background-color: darkgray;
+  color: white;
+  scale: 1.1;
+}
+
+span {
+  background-color: rgb(44, 106, 112);
+  border-radius: 5px;
+  padding: 4px;
+  width: 100%;
+  color: azure;
 }
 
 /* table */
