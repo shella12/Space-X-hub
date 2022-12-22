@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDragons, reserveDragon } from '../redux/Dragon/Dragon';
+import { fetchDragons, reserveDragon, cancelDragon } from '../redux/Dragon/Dragon';
 import DragonItem from '../components/DragonItem';
 
 const Dragons = () => {
@@ -15,10 +15,15 @@ const Dragons = () => {
     dispatch(reserveDragon(e.target.id));
   };
 
+  const onCancel = (e) => {
+    dispatch(cancelDragon(e.target.id));
+  };
+
   return (
     <div className="list-container">
       {dragons.map((dragon) => (
         <DragonItem
+          cancel={onCancel}
           reserve={onReserve}
           id={dragon.id}
           key={dragon.id}

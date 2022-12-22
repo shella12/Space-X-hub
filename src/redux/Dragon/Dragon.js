@@ -3,6 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const getDragons = (payload) => ({ type: 'GET', payload });
 export const reserveDragon = (id) => ({ type: 'RESERVE', id });
+export const cancelDragon = (id) => ({ type: 'CANCEL', id });
 
 const url = 'https://api.spacexdata.com/v3/dragons';
 
@@ -30,6 +31,13 @@ const dragonsReducer = (state = initialState, action) => {
       return state.map((state) => {
         if (state.id === action.id) {
           return { ...state, reserved: true };
+        }
+        return state;
+      });
+    case 'CANCEL':
+      return state.map((state) => {
+        if (state.id === action.id) {
+          return { ...state, reserved: false };
         }
         return state;
       });
