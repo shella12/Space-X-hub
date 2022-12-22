@@ -1,19 +1,13 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { getRocketData } from '../../redux/Rockets/RocketsSlice';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Rocket from './Rocket';
 
 const RocketsContainer = () => {
   const { rockets } = useSelector((store) => store.rockets);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getRocketData());
-  });
 
   return (
-    <section className='container m-2'>
-      <ul className='d-flex flex-column align-items'>
+    <section className="container m-2">
+      <ul className="d-flex flex-column align-items">
         {rockets.map((rocket) => (
           <Rocket
             key={rocket.id}

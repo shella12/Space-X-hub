@@ -7,47 +7,47 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
 
   const bookRocket = (id) => {
+    console.log(id);
     dispatch(bookRockets(id));
   }
 
   const cancelRocket = (id) => {
+    console.log(id);
     dispatch(cancelBooking(id));
   }
 
  return (
    <section className='container text-center rocket-container'>
-     <div className='row justify-content-center'>
-       <div className='col-3'>
-         <img
-           src={rocket.flickr_images}
-           alt='rocket photo'
-           className='rocket-img'
-         />
-       </div>
-       <div className='col-6 info'>
-         <h1>{rocket.rocket_name}</h1>
-         <p>
-           {rocket.reserved && (
-             <span className='btn btn-primary btn-sm m-1'>Reserved</span>
-           )}
-           {rocket.description}
-         </p>
-         {rocket.reserved ? (
-           <button
-             onClick={() => cancelRocket(rocket.id)}
-             className='btn btn-light btn-lg btn-outline-dark'
-           >
-             Cancel Reservation
-           </button>
-         ) : (
-           <button
-             onClick={() => bookRocket(rocket.id)}
-             className='btn btn-primary btn-lg'
-           >
-             Reserve Rocket
-           </button>
+     <div className='col-4'>
+       <img
+         src={rocket.flickr_images}
+         alt='rocket images'
+         className='rocket-img'
+       />
+     </div>
+     <div className='col-6 info'>
+       <h1>{rocket.rocket_name}</h1>
+       <p>
+         {rocket.reserved && (
+           <span className='btn btn-primary btn-sm m-1'>Reserved</span>
          )}
-       </div>
+         {rocket.description}
+       </p>
+       {rocket.reserved ? (
+         <button
+           className='btn btn-light btn-lg btn-outline-dark'
+           onClick={() => cancelRocket(rocket.id)}
+         >
+           Cancel Reservation
+         </button>
+       ) : (
+         <button
+           onClick={() => bookRocket(rocket.id)}
+           className='btn btn-primary btn-lg'
+         >
+           Reserve Rocket
+         </button>
+       )}
      </div>
    </section>
  );
