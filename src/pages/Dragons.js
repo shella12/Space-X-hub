@@ -1,17 +1,27 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { fetchDragons } from '../redux/Dragon/Dragon';
+import DragonItem from '../components/DragonItem';
 
 const Dragons = () => {
+  const dragons = useSelector((state) => state.dragons);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchDragons());
-  }, []);
-  return (
-    <>
+  }, [dispatch]);
 
-    </>
+  return (
+    <div className="list-container">
+      {dragons.map((dragon) => (
+        <DragonItem
+          key={dragon.id}
+          name={dragon.name}
+          type={dragon.type}
+          img={dragon.img}
+        />
+      ))}
+    </div>
   );
 };
 
