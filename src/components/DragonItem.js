@@ -2,16 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const dragonItem = (props) => {
-  /* eslint-disable */
-  const { name, type, img  } = props;
-  /* eslint-enable */
+  const { name, type, img } = props;
 
   return (
     <>
       <div className="dragon-item">
-        {/* eslint-disable */}
         <img alt="DragonPicture" src={img} />
-        {/* eslint-enable */}
         <div>
           <p>{name}</p>
           <p>{type}</p>
