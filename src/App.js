@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Rockets from './pages/Rockets';
 import Missions from './pages/Missions';
 import Dragons from './pages/Dragons';

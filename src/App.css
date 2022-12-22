@@ -88,3 +88,26 @@ span {
   width: 100%;
   color: azure;
 }
+
+.dragon {
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dragon:first-child {
+  background-position: center;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.type {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.reserved {
+  width: auto;
+}
