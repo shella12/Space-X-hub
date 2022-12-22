@@ -1,6 +1,6 @@
 import React from 'react';
-import { bookRockets, cancelBooking } from '../../redux/Rockets/RocketsSlice';
 import { useDispatch } from 'react-redux';
+import { bookRockets, cancelBooking } from '../../redux/Rockets/RocketsSlice';
 
 const Rocket = (props) => {
   const rocket = props;
@@ -9,48 +9,49 @@ const Rocket = (props) => {
   const bookRocket = (id) => {
     console.log(id);
     dispatch(bookRockets(id));
-  }
+  };
 
   const cancelRocket = (id) => {
     console.log(id);
     dispatch(cancelBooking(id));
-  }
+  };
 
- return (
-   <section className='container text-center rocket-container'>
-     <div className='col-4'>
+  return ( 
+    <section className="container text-center rocket-container">
+       <div className="col-4">
        <img
          src={rocket.flickr_images}
-         alt='rocket images'
-         className='rocket-img'
+         alt="rocket images"
+         className="rocket-img"
        />
      </div>
-     <div className='col-6 info'>
+       <div className="col-6 info">
        <h1>{rocket.rocket_name}</h1>
        <p>
          {rocket.reserved && (
-           <span className='btn btn-primary btn-sm m-1'>Reserved</span>
+           <span className="btn btn-primary btn-sm m-1">Reserved</span>
          )}
          {rocket.description}
        </p>
-       {rocket.reserved ? (
-         <button
-           className='btn btn-light btn-lg btn-outline-dark'
+       {rocket.reserved ? 
+       (
+         <button type="button"
+           className="btn btn-light btn-lg btn-outline-dark"
            onClick={() => cancelRocket(rocket.id)}
          >
            Cancel Reservation
          </button>
        ) : (
-         <button
+          <button
+          type="button"
            onClick={() => bookRocket(rocket.id)}
-           className='btn btn-primary btn-lg'
+           className="btn btn-primary btn-lg"
          >
            Reserve Rocket
          </button>
        )}
-     </div>
-   </section>
+       </div>
+    </section>
  );
-}
- 
+};
 export default Rocket;
