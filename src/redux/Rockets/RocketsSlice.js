@@ -1,3 +1,4 @@
+/* eslint no-param-reassign: "error" */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const rocketUrl = 'https://api.spacexdata.com/v3/rockets';
@@ -6,11 +7,14 @@ const initialState = {
   rockets: [],
 };
 
-export const getRocketData = createAsyncThunk('rocket/getRocketData', async () => {
-  const response = await fetch(rocketUrl);
-  const data = await response.json();
-  return data;
-});
+export const getRocketData = createAsyncThunk(
+  'rocket/getRocketData',
+  async () => {
+    const response = await fetch(rocketUrl);
+    const data = await response.json();
+    return data;
+  },
+);
 
 const rocketsSlice = createSlice({
   name: 'rocket',

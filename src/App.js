@@ -16,16 +16,16 @@ function App() {
 
   useEffect(() => {
     dispatch(getRocketData());
-  }, []);
+  });
 
   return (
-    <div className='App'>
+    <div className="App">
       <Navbar />
       <Routes>
         <Route index element={<RocketsContainer />} />
-        <Route path='/Missions' element={<Missions />} />
-        <Route path='/Dragons' element={<Dragons />} />
-        <Route path='/Profile' element={<Profile />} />
+        <Route path="/Missions" element={<Missions />} />
+        <Route path="/Dragons" element={<Dragons />} />
+        <Route path="/Profile" element={<Profile />} />
       </Routes>
     </div>
   );
