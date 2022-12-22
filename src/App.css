@@ -71,29 +71,31 @@ tr:nth-child(even) {
 .reservation {
   background-color: transparent;
   padding: 0.6rem 1.1rem;
-  border: 2px solid #6F757D;
-  color: #6F757D;
+  border: 2px solid #6f757d;
+  color: #6f757d;
 }
 
 .canel-reservation {
   background-color: transparent;
   padding: 0.6rem 0.7rem;
-  border: 2px solid #D66C72;
-  color: #D66C72;
+  border: 2px solid #d66c72;
+  color: #d66c72;
 }
 
-.reservation:hover, .canel-reservation:hover {
-  background-color: #6F757D;
+.reservation:hover,
+.canel-reservation:hover {
+  background-color: #6f757d;
   color: white;
   scale: 1.1;
 }
 
 .canel-reservation:hover {
-  background-color: #D66C72;
+  background-color: #d66c72;
 }
 
-.member,.not-member {
-  background-color: #4C9FB6;
+.member,
+.not-member {
+  background-color: #4c9fb6;
   border-radius: 5px;
   padding: 4px;
   width: 100%;
@@ -101,8 +103,9 @@ tr:nth-child(even) {
 }
 
 .not-member {
-  background-color: #6F757D;
+  background-color: #6f757d;
 }
+
 .dragon {
   height: 350px;
   background-size: cover;
