@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { getRocketData } from './redux/Rockets/Rockets';
 import { Route, Routes } from 'react-router-dom';
-import RocketsContainer from './pages/Rocket/Rockets'
+import { getRocketData } from './redux/Rockets/Rockets';
+import RocketsContainer from './pages/Rocket/Rockets';
 import Missions from './pages/Missions';
 import Dragons from './pages/Dragons';
 import Profile from './pages/MyProfile';

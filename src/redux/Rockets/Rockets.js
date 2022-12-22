@@ -13,7 +13,7 @@ export const getRocketData = createAsyncThunk(
     const response = await fetch(rocketUrl);
     const data = await response.json();
     return data;
-  }
+  },
 );
 
 const rocketsSlice = createSlice({
