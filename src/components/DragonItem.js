@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const dragonItem = (props) => {
-  const { name, type, img } = props;
+  const {
+    id, name, type, img, reserve,
+  } = props;
 
   return (
     <>
@@ -11,7 +13,7 @@ const dragonItem = (props) => {
         <div>
           <p>{name}</p>
           <p>{type}</p>
-          <button type="submit">Reserve Dragon</button>
+          <button id={id} type="submit" onClick={reserve}>Reserve Dragon</button>
         </div>
       </div>
     </>

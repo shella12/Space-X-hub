@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDragons } from '../redux/Dragon/Dragon';
+import { fetchDragons, reserveDragon } from '../redux/Dragon/Dragon';
 import DragonItem from '../components/DragonItem';
 
 const Dragons = () => {
@@ -11,10 +11,16 @@ const Dragons = () => {
     dispatch(fetchDragons());
   }, [dispatch]);
 
+  const onReserve = (e) => {
+    dispatch(reserveDragon(e.target.id));
+  };
+
   return (
     <div className="list-container">
       {dragons.map((dragon) => (
         <DragonItem
+          reserve={onReserve}
+          id={dragon.id}
           key={dragon.id}
           name={dragon.name}
           type={dragon.type}
