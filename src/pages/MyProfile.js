@@ -1,6 +1,14 @@
-const Profile = () => (
-  <>
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
-  </>
-);
-export default Profile;
+const MyProfile = () => {
+  let dragons = useSelector((state) => state.dragons);
+  dragons = dragons.filter((dragon) => dragon.reserved);
+
+  return (
+    <>
+    </>
+  );
+};
+
+export default MyProfile;
