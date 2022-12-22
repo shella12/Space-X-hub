@@ -68,23 +68,40 @@ tr:nth-child(even) {
   background-color: lightgrey;
 }
 
-td button {
+.reservation {
   background-color: transparent;
-  padding: 0.6rem 0.7rem;
-  border: 2px solid darkgray;
-  color: gray;
+  padding: 0.6rem 1.1rem;
+  border: 2px solid #6F757D;
+  color: #6F757D;
 }
 
-td button:hover {
-  background-color: darkgray;
+.canel-reservation {
+  background-color: transparent;
+  padding: 0.6rem 0.7rem;
+  border: 2px solid #D66C72;
+  color: #D66C72;
+}
+
+.reservation:hover, .canel-reservation:hover {
+  background-color: #6F757D;
   color: white;
   scale: 1.1;
 }
 
-span {
-  background-color: rgb(44, 106, 112);
+.canel-reservation:hover {
+  background-color: #D66C72;
+}
+
+
+.member,.not-member {
+  background-color: #4C9FB6;
   border-radius: 5px;
   padding: 4px;
   width: 100%;
   color: azure;
 }
+
+.not-member {
+  background-color: #6F757D;
+}
+

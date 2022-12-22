@@ -1,37 +1,22 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../redux/Missions/Missions';
+import MissionList from '../components/MissionList';
+import { fetchMissions, reserveButton } from '../redux/Missions/Missions';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  const missions = useSelector((state) => state.missionReducer);
+  const missions = useSelector((state) => state.missionReducer.missions);
   useEffect(() => {
     dispatch(fetchMissions()).unwrap();
   }, []);
+
+  const onClickHandler = (id) => {
+    dispatch(reserveButton(id));
+  };
+
   return (
     <table>
-      <tr>
-        <th>Mission</th>
-        <th>Description</th>
-        <th>Status</th>
-      </tr>
-      {missions ? Object.entries(missions).map((mission) => (
-        <tr key={mission[1].mission_id}>
-          <td>
-            {mission[1].mission_name}
-          </td>
-          <td>
-            {mission[1].description}
-          </td>
-          <td>
-            <span><span>Not A Member</span></span>
-          </td>
-          <td>
-            <button type="button">Join Mission</button>
-          </td>
-        </tr>
-      )) : <h1>Loadinng</h1>}
-
+      <MissionList missions={Object.entries(missions)} onClickHandler={onClickHandler} />
     </table>
 
   );
