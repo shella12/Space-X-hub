@@ -111,3 +111,25 @@ span {
 .reserved {
   width: auto;
 }
+
+/* rockets page */
+.rocket-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.rocket-img {
+  width: 300px;
+  height: 200px;
+}
+
+.info {
+  text-align: left;
+}
+
+.btn {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
