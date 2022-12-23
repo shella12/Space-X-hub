@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import Rocket from './Rocket';
 
 const RocketsContainer = () => {
-  const { rockets } = useSelector((store) => store.rockets);
+  const rockets = useSelector((store) => store.rockets.rockets);
 
   return (
     <section className="container m-2">
