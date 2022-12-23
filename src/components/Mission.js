@@ -2,11 +2,6 @@ import PropTypes from 'prop-types';
 
 const Mission = (props) => {
   const { mission, onClickHandler } = props;
-  // const reservedStyle = {
-  //   color: 'red',
-  //   borderColor: 'red',
-  // };
-
   return (
     <>
       <tr>
