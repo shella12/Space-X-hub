@@ -5,7 +5,6 @@ import { reserveButton } from '../redux/Missions/Missions';
 const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missionReducer.missions);
-  console.log(missions);
   const onClickHandler = (id) => {
     dispatch(reserveButton(id));
   };
