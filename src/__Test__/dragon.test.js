@@ -9,7 +9,7 @@ describe('testing mission component', () => {
     const dragons = render(
       <Provider store={store}>
         <Dragons />
-      </Provider>
+      </Provider>,
     );
     expect(dragons).toMatchSnapshot();
   });
