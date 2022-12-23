@@ -7,8 +7,24 @@ const MyProfile = () => {
   const reservedDragons = dragons.filter((dragon) => dragon.reserved);
   const missions = Object.entries(useSelector((state) => state.missionReducer));
   const joinedMissions = missions[0][1].filter((mission) => mission.reserverd);
+  const rockets = Object.entries(useSelector((state) => state.rockets));
+  const reservedRockets = rockets[0][1].filter((rocket) => rocket.reserved);
+
   return (
     <section className="container border-top rounded-0 border-2 d-flex justify-content-between gap-5">
+      <div className="col-3">
+        <h2>My Rockets</h2>
+        {!reservedRockets.length && <p>No Rockets reserved!</p>}
+        <Table bordered>
+          <tbody>
+            {reservedRockets.map((rocket) => (
+              <tr key={rocket.id}>
+                <td className="p-3">{rocket.rocket_name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
       <div className="col-3">
         <h2>My Missions</h2>
         {!joinedMissions.length && <p>No missions joined</p>}

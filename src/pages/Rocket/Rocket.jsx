@@ -7,12 +7,10 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
 
   const bookRocket = (id) => {
-    console.log(id);
     dispatch(bookRockets(id));
   };
 
   const cancelRocket = (id) => {
-    console.log(id);
     dispatch(cancelBooking(id));
   };
 
