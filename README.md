@@ -22,8 +22,6 @@
 # 📖 Space Travelers' Hub
  <a name="about-project"></a>
 
-> Just a Simple Bookstore
-
 **[Space Travelers' Hub]** 
 - This web app allows users to see available rockets for booking   and missions they can join. Users can see their booked rockets and joined missions in the My-profile page and cancel any joined mission or booked rocket.
 
@@ -109,7 +107,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Will diplay books from API
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
