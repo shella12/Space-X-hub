@@ -1,19 +1,21 @@
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Space Travelers' Hub](#-space-travelers-hub)
+  - [🛠 Built With React](#-built-with-react)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [👥 Ayesha  ](#-ayesha--)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -22,7 +24,8 @@
 
 > Just a Simple Bookstore
 
-**[Space Travelers' Hub]** displays a list of books form API!
+**[Space Travelers' Hub]** 
+- This web app allows users to see available rockets for booking   and missions they can join. Users can see their booked rockets and joined missions in the My-profile page and cancel any joined mission or booked rocket.
 
 ## 🛠 Built With <a name="built-with">React</a>
 
@@ -88,6 +91,17 @@ To run the project, execute the following command:
 - GitHub: [@samWfelcie](https://github.com/mrsamsharma)
 - Twitter: [@samwfelice](https://twitter.com/samwfelice)
 - LinkedIn: [samfelice](https://www.linkedin.com/in/samfelice)
+
+👤 Soe Sandar Win
+
+- GitHub: [@soesandarwin2201](https://github.com/soesandarwin2201)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/soe-sandar-win-softwareengineer/)
+
+## 👥 Ayesha  <a name="authors"></a>
+
+- GitHub: [@shella12](https://github.com/shella12)
+- Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
+- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
