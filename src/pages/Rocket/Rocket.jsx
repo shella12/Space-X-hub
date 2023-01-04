@@ -15,35 +15,35 @@ const Rocket = (props) => {
   };
 
   return (
-    <section className='container text-center rocket-container'>
-      <div className='col-4'>
+    <section className="container text-center rocket-container">
+      <div className="col-4">
         <img
           src={rocket.flickr_images}
-          alt='rocket images'
-          className='rocket-img'
+          alt="rocket images"
+          className="rocket-img"
         />
       </div>
-      <div className='col-6 info'>
+      <div className="col-6 info">
         <h1>{rocket.rocket_name}</h1>
         <p>
           {rocket.reserved && (
-            <p className='btn btn-primary btn-sm m-1'>Reserved</p>
+            <p className="btn btn-primary btn-sm m-1">Reserved</p>
           )}
           {rocket.description}
         </p>
         {rocket.reserved ? (
           <button
-            type='button'
-            className='btn btn-light btn-lg btn-outline-dark'
+            type="button"
+            className="btn btn-light btn-lg btn-outline-dark"
             onClick={() => cancelRocket(rocket.id)}
           >
             Cancel Reservation
           </button>
         ) : (
           <button
-            type='button'
+            type="button"
             onClick={() => bookRocket(rocket.id)}
-            className='btn btn-primary btn-lg'
+            className="btn btn-primary btn-lg"
           >
             Reserve Rocket
           </button>
